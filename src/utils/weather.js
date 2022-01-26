@@ -7,7 +7,7 @@ const weather = (lat,lon,place,callback)=>{
         }else if(body.error){
             callback(body.error.info,undefined);
         }else{
-            callback(undefined,"The temperature of "+place+" is "+body.current.temperature+" degrees and there is a "+parseFloat(body.current.precip)*100+"% chance of precipitation.");
+            callback(undefined,"The temperature of "+place+" is "+body.current.temperature+" degrees farenheit and there is a "+parseFloat(body.current.precip)*100+"% chance of precipitation.");
         }
     })
 }
